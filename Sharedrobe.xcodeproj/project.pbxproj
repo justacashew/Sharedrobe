@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55FEE8991A9EC5A500A16881 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE8981A9EC5A500A16881 /* AddPhotoViewController.swift */; };
+		55FEE89B1A9EC6FD00A16881 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE89A1A9EC6FD00A16881 /* DismissSegue.swift */; };
 		63988E141A9951F900F1CB30 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63988E131A9951F900F1CB30 /* AddItemViewController.swift */; };
 		63988E181A99584600F1CB30 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63988E171A99584600F1CB30 /* RLMSupport.swift */; };
 		63988E1A1A99587000F1CB30 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63988E191A99587000F1CB30 /* UserProfile.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55FEE8981A9EC5A500A16881 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		55FEE89A1A9EC6FD00A16881 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		63988E131A9951F900F1CB30 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		63988E171A99584600F1CB30 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		63988E191A99587000F1CB30 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				63988E131A9951F900F1CB30 /* AddItemViewController.swift */,
 				639C849D1A9D6A8D004DCEE1 /* HomeVC.swift */,
 				639C849F1A9D6B33004DCEE1 /* HomeResultViewController.swift */,
+				55FEE8981A9EC5A500A16881 /* AddPhotoViewController.swift */,
+				55FEE89A1A9EC6FD00A16881 /* DismissSegue.swift */,
 			);
 			path = Sharedrobe;
 			sourceTree = "<group>";
@@ -250,7 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FEE8991A9EC5A500A16881 /* AddPhotoViewController.swift in Sources */,
 				63F1BF881A95B07600978946 /* SignupVC.swift in Sources */,
+				55FEE89B1A9EC6FD00A16881 /* DismissSegue.swift in Sources */,
 				63F1BF681A95A3EC00978946 /* ViewController.swift in Sources */,
 				63988E1D1A99588200F1CB30 /* ClothingProfile.swift in Sources */,
 				63988E181A99584600F1CB30 /* RLMSupport.swift in Sources */,

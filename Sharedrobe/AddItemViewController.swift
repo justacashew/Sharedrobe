@@ -71,6 +71,9 @@ class AddItemViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     @IBAction func doneWithAddingItem(sender: UIButton) {
         addNewClothing()
+        
+        //segue to go back to UserProfileViewController
+        
 
     }
     //validation function to check if all the fields are filled.
