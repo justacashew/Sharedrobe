@@ -68,9 +68,9 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func doneButton(sender: UIButton) {
-        profpic1 = profilePic.image
+/*        profpic1 = profilePic.image
         let user = UserProfile()
-        let realm = RLMRealm.defaultRealm()
+       let realm = RLMRealm.defaultRealm()
         
         realm.beginWriteTransaction()
         
@@ -79,7 +79,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         user.nameLast = "Monkeys"
         realm.addObject(user)
         realm.commitWriteTransaction()
-    
+*/    
     }
 /*    @IBAction func doneButton(sender: UIButton) {
         self.performSegueWithIdentifier("fromAddPhotoToUserHome", sender: image)

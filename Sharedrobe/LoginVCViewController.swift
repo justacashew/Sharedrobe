@@ -10,7 +10,7 @@ import UIKit
 
 class LoginVCViewController: UIViewController {
 
-    var currentUserProfile = UserProfile()
+//    var currentUserProfile = UserProfile()
     
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!

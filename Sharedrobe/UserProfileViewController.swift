@@ -10,7 +10,7 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
 
-    var image : UIImage?
+//    var image : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
