@@ -9,6 +9,5 @@ class UserProfile: RLMObject {
     dynamic var password = ""
     dynamic var created = NSDate()
     dynamic var clothing_profile = RLMArray(objectClassName: ClothingProfile.className())
-    dynamic var profpic : UIImage?
-
+    dynamic var userProfPic: NSData?
 }

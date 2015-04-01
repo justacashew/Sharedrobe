@@ -11,7 +11,10 @@ import Realm
 
 class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var profpic1 : UIImage?
+    @IBOutlet weak var profilePic: UIImageView!
+    let picker = UIImagePickerController()
+    
+    @IBOutlet weak var userNameLabel: UILabel!
     
     func noCamera(){
         let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
@@ -19,9 +22,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         alertVC.addAction(okAction)
         presentViewController(alertVC, animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var profilePic: UIImageView!
-    let picker = UIImagePickerController()
+
     
     @IBAction func photoFromLibrary(sender: UIButton) {
         picker.allowsEditing = false //grabs full picture
@@ -46,7 +47,19 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //display current profile picture
+        let user = UserProfile.objectsWhere("username = 'testyunowork'")
+        var tempuser = user.objectAtIndex(0) as UserProfile
+        var picData = tempuser.userProfPic
+        let defpic = UIImage(data: picData!)
+        profilePic.image = defpic
+        
+        //for picking camera
         picker.delegate = self
+        
+        //display user name
+        userNameLabel.text = tempuser.username
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,29 +79,31 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    @IBAction func doneButton(sender: UIButton) {
-/*        profpic1 = profilePic.image
-        let user = UserProfile()
-       let realm = RLMRealm.defaultRealm()
+ 
+    //MARK: - SEGUES
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //right before segue happens, prepares any code before it happens
+        var DestViewController: UserProfileViewController = segue.destinationViewController as UserProfileViewController
         
+        DestViewController.displayUserPic = profilePic
+        //taking data from this View and pushing it to the next view
+    }
+    
+    @IBAction func doneButton(segue:UIStoryboardSegue) {
+        saveUserPic()
+    }
+    
+    func saveUserPic() {
+//        let usernamestr = "testyunowork"
+        let realm = RLMRealm.defaultRealm()
         realm.beginWriteTransaction()
-        
-        user.profpic = profpic1
-        user.nameFirst = "Ducks"
-        user.nameLast = "Monkeys"
-        realm.addObject(user)
+        var qres = UserProfile.objectsWhere("username = 'testyunowork'")
+        let tempuser = qres.objectAtIndex(0) as UserProfile
+        tempuser.userProfPic = UIImagePNGRepresentation(profilePic.image)
         realm.commitWriteTransaction()
-*/    
-    }
-/*    @IBAction func doneButton(sender: UIButton) {
-        self.performSegueWithIdentifier("fromAddPhotoToUserHome", sender: image)
     }
     
-    override func override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if (segue.identifier = "fromAddPhotoToUserHome"){}
-    }
-*/
+    
     /*
     // MARK: - Navigation
 

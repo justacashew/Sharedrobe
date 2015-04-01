@@ -69,6 +69,7 @@ class AddItemViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         realm.commitWriteTransaction()
         
     }
+
     @IBAction func doneWithAddingItem(sender: UIButton) {
         addNewClothing()
         
@@ -76,6 +77,7 @@ class AddItemViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
 
     }
+    
     //validation function to check if all the fields are filled.
     
 //    func validateFields() -> Bool {

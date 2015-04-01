@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		558C74F91AA42AE10080055B /* AddClothingPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C74F81AA42AE10080055B /* AddClothingPhotoViewController.swift */; };
+		558C74FB1AA42C7A0080055B /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C74FA1AA42C7A0080055B /* GlobalVars.swift */; };
 		55FEE8991A9EC5A500A16881 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE8981A9EC5A500A16881 /* AddPhotoViewController.swift */; };
 		55FEE89B1A9EC6FD00A16881 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE89A1A9EC6FD00A16881 /* DismissSegue.swift */; };
 		63988E141A9951F900F1CB30 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63988E131A9951F900F1CB30 /* AddItemViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		558C74F81AA42AE10080055B /* AddClothingPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClothingPhotoViewController.swift; sourceTree = "<group>"; };
+		558C74FA1AA42C7A0080055B /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		55FEE8981A9EC5A500A16881 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		55FEE89A1A9EC6FD00A16881 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		63988E131A9951F900F1CB30 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				639C849D1A9D6A8D004DCEE1 /* HomeVC.swift */,
 				639C849F1A9D6B33004DCEE1 /* HomeResultViewController.swift */,
 				55FEE8981A9EC5A500A16881 /* AddPhotoViewController.swift */,
+				558C74F81AA42AE10080055B /* AddClothingPhotoViewController.swift */,
+				558C74FA1AA42C7A0080055B /* GlobalVars.swift */,
 				55FEE89A1A9EC6FD00A16881 /* DismissSegue.swift */,
 			);
 			path = Sharedrobe;
@@ -264,11 +270,13 @@
 				63988E181A99584600F1CB30 /* RLMSupport.swift in Sources */,
 				63F1BF661A95A3EC00978946 /* AppDelegate.swift in Sources */,
 				63988E1A1A99587000F1CB30 /* UserProfile.swift in Sources */,
+				558C74FB1AA42C7A0080055B /* GlobalVars.swift in Sources */,
 				63E062BE1A95CF7C00445AEF /* HomePageViewController.swift in Sources */,
 				63F1BF861A95AF3500978946 /* LoginVCViewController.swift in Sources */,
 				639C84A01A9D6B33004DCEE1 /* HomeResultViewController.swift in Sources */,
 				63988E201A995D1E00F1CB30 /* UserProfileViewController.swift in Sources */,
 				639C849E1A9D6A8D004DCEE1 /* HomeVC.swift in Sources */,
+				558C74F91AA42AE10080055B /* AddClothingPhotoViewController.swift in Sources */,
 				63988E141A9951F900F1CB30 /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

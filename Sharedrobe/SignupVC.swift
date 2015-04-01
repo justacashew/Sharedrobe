@@ -110,10 +110,14 @@ class SignupVC: UIViewController {
                         tempUser.nameLast = lastNameText.text
                         tempUser.email = emailText.text
                         
+                        var defaultPic = UIImage(named: "defaultUserProfPic")
+                        tempUser.userProfPic = UIImagePNGRepresentation(defaultPic)
+                        
                         user_prof = tempUser
                         realm.addObject(user_prof)
                         realm.commitWriteTransaction()
                         self.dismissViewControllerAnimated(true, completion: nil)
+                        
                     } else {
                         var error_msg:NSString
                         

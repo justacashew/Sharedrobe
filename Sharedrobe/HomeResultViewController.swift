@@ -16,29 +16,29 @@ class HomeResultViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //filterResultsWithSearchString(searchOption)
+        var results = filterResultsWithSearchString(searchOption)
         //resultLabel.text = "\(searchResults)"
         resultLabel.text = searchOption
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func filterResultsWithSearchString(searchString: String) {
+    func filterResultsWithSearchString(searchString: String) -> RLMResults{
         //let predicate = NSPredicate(format: "name BEGINSWITH [c]%@", searchString) // 1
         let AllClothingResults = ClothingProfile.allObjects()
         switch searchString {
         case "shirt":
-            searchResults = ClothingProfile.objectsWhere("type = 'shirt' OR type = 'shirts'").sortedResultsUsingProperty("name", ascending:true)
+            return ClothingProfile.objectsWhere("type = 'shirt' OR type = 'shirts'").sortedResultsUsingProperty("name", ascending:true)
         case "pants":
-            searchResults = ClothingProfile.objectsWhere("type = 'pant' OR type = 'pants'").sortedResultsUsingProperty("name", ascending:true)
+            return ClothingProfile.objectsWhere("type = 'pant' OR type = 'pants'").sortedResultsUsingProperty("name", ascending:true)
         case "dress":
-            searchResults = ClothingProfile.objectsWhere("type = 'dress' OR type = 'dresses'").sortedResultsUsingProperty("name", ascending:true)
+            return ClothingProfile.objectsWhere("type = 'dress' OR type = 'dresses'").sortedResultsUsingProperty("name", ascending:true)
         default:
-            searchResults = AllClothingResults
+            return AllClothingResults
         }
     }
 
